@@ -80,6 +80,7 @@ frontend-ci.yml	Run tests and build React app
 backend-ci.yml	Run backend tests
 frontend-cd.yml	Deploy frontend automatically
 backend-cd.yml	Deploy backend automatically
+
 5️⃣ Monitoring Setup
 
 Configured uptime monitoring (e.g., UptimeRobot)
@@ -121,9 +122,6 @@ npm run dev
 npm start
 
 
-
-SCREENSHOTS
-
 ## 📸 Screenshots
 
 ### CI/CD Pipeline Running
@@ -134,15 +132,14 @@ SCREENSHOTS
 
 
 
+### DEPLOYMENT LINKS
 
-DEPLOYMENT LINKS
-
-VERCEL 
+## VERCEL 
 
 https://deploymmentwk7.vercel.app/
 
 
-RENDER 
+## RENDER 
 
 https://deploymmentwk7.onrender.com
 
