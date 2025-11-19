@@ -7,6 +7,7 @@ export default function Register() {
   const [password, setPassword] = useState("");
 
   const register = async () => {
+<<<<<<< HEAD
     try {
       await API.post("/auth/register", { name, email, password });
       window.location.href = "/login";
@@ -84,6 +85,19 @@ export default function Register() {
       >
         Register
       </button>
+=======
+    await API.post("/auth/register", { name, email, password });
+    window.location.href = "/login";
+  };
+
+  return (
+    <div style={{ padding: 30 }}>
+      <h2>Create Account</h2>
+      <input placeholder="Name" onChange={(e) => setName(e.target.value)} />
+      <input placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
+      <input placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)} />
+      <button onClick={register}>Register</button>
+>>>>>>> 7b8ae07c1051406c806cfcbc5610c31267794dac
     </div>
   );
 }

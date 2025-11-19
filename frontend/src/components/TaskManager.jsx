@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 import { useState } from 'react';
 import './TaskManager.css';
+=======
+import { useState } from 'react'
+import './TaskManager.css'
+>>>>>>> 7b8ae07c1051406c806cfcbc5610c31267794dac
 
 function TaskManager() {
   const [tasks, setTasks] = useState([
     "Learn React",
     "Build Task Manager",
     "Test Frontend"
+<<<<<<< HEAD
   ]);
   const [text, setText] = useState("");
 
@@ -51,3 +57,19 @@ function TaskManager() {
 }
 
 export default TaskManager;
+=======
+  ])
+
+  return (
+    <div className="task-manager">
+      <ul className="task-list">
+        {tasks.map((task, index) => (
+          <li key={index}>{task}</li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+export default TaskManager
+>>>>>>> 7b8ae07c1051406c806cfcbc5610c31267794dac

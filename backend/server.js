@@ -20,6 +20,7 @@ app.get("/api/health", (req, res) => {
 });
 
 // Load task routes if you have them
+<<<<<<< HEAD
 
 
 
@@ -29,6 +30,11 @@ connectDB();
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/tasks', require('./routes/taskRoutes'));
+=======
+const taskRoutes = require("./routes/taskRoutes");
+app.use("/api/tasks", taskRoutes);
+
+>>>>>>> 7b8ae07c1051406c806cfcbc5610c31267794dac
 // Connect to MongoDB
 
 const PORT = process.env.PORT;

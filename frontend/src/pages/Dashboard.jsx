@@ -6,6 +6,7 @@ export default function Dashboard() {
   const [text, setText] = useState("");
 
   const getTasks = async () => {
+<<<<<<< HEAD
     try {
       const res = await API.get("/tasks");
       setTasks(res.data);
@@ -13,10 +14,15 @@ export default function Dashboard() {
       console.error(err);
       alert("Failed to fetch tasks");
     }
+=======
+    const res = await API.get("/tasks");
+    setTasks(res.data);
+>>>>>>> 7b8ae07c1051406c806cfcbc5610c31267794dac
   };
 
   const addTask = async () => {
     if (!text) return;
+<<<<<<< HEAD
     try {
       await API.post("/tasks", { text });
       setText("");
@@ -45,12 +51,28 @@ export default function Dashboard() {
       console.error(err);
       alert("Failed to delete task");
     }
+=======
+    await API.post("/tasks", { text });
+    setText("");
+    getTasks();
+  };
+
+  const toggleTask = async (id, completed) => {
+    await API.patch(`/tasks/${id}`, { completed: !completed });
+    getTasks();
+  };
+
+  const deleteTask = async (id) => {
+    await API.delete(`/tasks/${id}`);
+    getTasks();
+>>>>>>> 7b8ae07c1051406c806cfcbc5610c31267794dac
   };
 
   useEffect(() => {
     getTasks();
   }, []);
 
+<<<<<<< HEAD
   const inputStyle = {
     width: "100%",
     padding: "12px 15px",
@@ -108,11 +130,17 @@ export default function Dashboard() {
       }}
     >
       <h1 style={{ textAlign: "center", marginBottom: 20 }}>Task Manager</h1>
+=======
+  return (
+    <div style={{ padding: 30, maxWidth: 400, margin: "0 auto" }}>
+      <h1>Task Manager</h1>
+>>>>>>> 7b8ae07c1051406c806cfcbc5610c31267794dac
 
       <input
         placeholder="Add a task..."
         value={text}
         onChange={(e) => setText(e.target.value)}
+<<<<<<< HEAD
         style={inputStyle}
       />
       <button
@@ -136,6 +164,27 @@ export default function Dashboard() {
             >
               X
             </button>
+=======
+        style={{ width: "100%", padding: 10 }}
+      />
+      <button onClick={addTask} style={{ width: "100%", marginTop: 10 }}>
+        Add Task
+      </button>
+
+      <ul style={{ marginTop: 20 }}>
+        {tasks.map((task) => (
+          <li key={task._id} style={{ display: "flex", justifyContent: "space-between", marginBottom: 10 }}>
+            <span
+              onClick={() => toggleTask(task._id, task.completed)}
+              style={{
+                textDecoration: task.completed ? "line-through" : "none",
+                cursor: "pointer",
+              }}
+            >
+              {task.text}
+            </span>
+            <button onClick={() => deleteTask(task._id)}>X</button>
+>>>>>>> 7b8ae07c1051406c806cfcbc5610c31267794dac
           </li>
         ))}
       </ul>
