@@ -1,5 +1,6 @@
 ## Project  Structure
 
+```
 
 DEPLOYMENT-AND-DEVOPS-ESSENTIALS/
 │
@@ -31,6 +32,8 @@ DEPLOYMENT-AND-DEVOPS-ESSENTIALS/
 ├── README.md                 # Your documentation
 └── Week7-Assignment.md       # Assignment instructions
 
+
+```
 
 
 🚀 Deployment Steps
@@ -89,31 +92,31 @@ Console and API response monitoring enabled
 🧪 Running the Project Locally
 
 
-Clone Repository
+### Clone Repository
 git clone <your-repo-url>
 cd <repo-name>
 
-Install Dependencies
+### Install Dependencies
 
-Frontend:
+### Frontend:
 
 cd client
 npm install
 
 
-Backend:
+### Backend:
 
 cd server
 npm install
 
-Run Development Servers
+## Run Development Servers
 
-Frontend:
+### Frontend:
 
 npm run dev
 
 
-Backend:
+### Backend:
 
 npm start
 
